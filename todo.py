@@ -1,2 +1,6 @@
 def view_tasks():
-    print(tasks[10])   # BUG: index out of range
+    if not tasks:
+        print("No tasks available")
+    else:
+        for i, task in enumerate(tasks, 1):
+            print(i, task)
